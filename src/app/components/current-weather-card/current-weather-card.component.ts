@@ -11,6 +11,9 @@ export class CurrentWeatherCardComponent implements OnInit {
 
   private cityName: string;
   private cityWeatherData: {};
+  
+  private keyFound: boolean = false;
+
   constructor() { 
   }
 
@@ -18,10 +21,10 @@ export class CurrentWeatherCardComponent implements OnInit {
     this.cityName = this.weatherData.key;
     this.cityWeatherData = this.weatherData.value.current;
 
-    if (!this.cityWeatherData['condition']['icon'].includes('https://'))
-      this.cityWeatherData['condition']['icon'] = this.cityWeatherData['condition']['icon'].replace('//', 'https://');
+    if(this.cityWeatherData)
+      this.keyFound = true;
+    
 
-    console.dir(this.cityWeatherData);
   }
 
 }

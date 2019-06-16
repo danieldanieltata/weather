@@ -1,0 +1,11 @@
+<h2>{{_forecastData.location.name}}</h2>
+<div class="forecast-days-container">
+
+  <mat-card class="forecast-day-card" *ngFor='let forcastDay of forecastDaysArray'>
+    {{forcastDay.stringDay}}
+    <img [src]='forcastDay.day.condition.icon' alt="{{forcastDay.day.condition.text}}">
+    
+    <h3 class="weather-info-item">{{forcastDay.day.avgtemp_c}}&deg;</h3>
+  </mat-card>
+
+</div>

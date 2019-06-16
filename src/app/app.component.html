@@ -2,8 +2,11 @@
 
 <div class="container">
 
-    <app-search class="full-width"></app-search>
+    <app-search class="full-width" (cityToGet)='getNewCity($event)'></app-search>
     
+    <app-forecast [forecastData]='forecastData' *ngIf='forecastData'></app-forecast>
+
+    <h2 style="width: 1000px;">Most popular destinations</h2>
     <div class="most-searched-cities">
             <app-current-weather-card *ngFor='let cityObj of mostSearchedPlaces | keyvalue' [weatherData]='cityObj'></app-current-weather-card>
     </div>

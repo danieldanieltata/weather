@@ -1,12 +1,12 @@
-<mat-card class='current-weather-card'>
+<mat-card class='current-weather-card' *ngIf='keyFound'>
   <div class="row">
       <h3>{{cityName}}</h3>
-      <img [src]='cityWeatherData.condition.icon' alt="">
+      <img [src]='cityWeatherData.condition.icon' alt="{{cityWeatherData.condition.text}}">
   </div>
 
-  <h5 class='weather-information'>Tempature: {{cityWeatherData.temp_c}}c</h5>
+  <h5 class='weather-information'>Tempature: {{cityWeatherData.temp_c}}&deg;</h5>
 
-  <h5 class='weather-information'>Feels Like: {{cityWeatherData.feelslike_c}}c</h5>
+  <h5 class='weather-information'>Feels Like: {{cityWeatherData.feelslike_c}}&deg;</h5>
 
   <h5 class='weather-information'>Wind: {{cityWeatherData.wind_kph}}kph</h5>
 

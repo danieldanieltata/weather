@@ -1,4 +1,10 @@
 <mat-form-field appearance="outline" id='search-input'>
     <mat-label>Search your destination</mat-label>
-    <input matInput>
+    <input matInput [matAutocomplete]='auto' (input)="onSearchChange($event.target.value)" placeholder="Where do yo wanna go?">
+
+    <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of resultsOfSearch" (onSelectionChange)='onSelectionChange($event)'[value]="option.name">
+              {{ option.name }}
+            </mat-option>
+    </mat-autocomplete>
 </mat-form-field>

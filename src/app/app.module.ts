@@ -9,19 +9,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule,
          MatInputModule,
-         MatCardModule } from '@angular/material';
+         MatCardModule,
+         MatOptionModule,
+         MatAutocompleteModule } from '@angular/material';
 
 // Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SearchComponent } from './components/search/search.component';
-import { CurrentWeatherCardComponent } from './components/current-weather-card/current-weather-card.component'
+import { CurrentWeatherCardComponent } from './components/current-weather-card/current-weather-card.component';
+import { ForecastComponent } from './components/forecast/forecast.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     SearchComponent,
-    CurrentWeatherCardComponent, 
+    CurrentWeatherCardComponent,
+    ForecastComponent, 
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { CurrentWeatherCardComponent } from './components/current-weather-card/c
     MatToolbarModule,
     MatInputModule,
     MatCardModule,
+    MatOptionModule,
+    MatAutocompleteModule,
     HttpClientModule
   ],
   providers: [],
