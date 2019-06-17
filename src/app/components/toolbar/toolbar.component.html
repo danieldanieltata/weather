@@ -1,4 +1,12 @@
 <mat-toolbar color='primary'>
-    <i class="material-icons custom-icon-prop">cloud</i>
-    <span>Weather</span>
+    <div class='toolbar-container'>
+        <i class="material-icons custom-icon-prop">cloud</i>
+        <span>Weather</span>
+
+        <div class="spacer"></div>
+
+        <button mat-icon-button matTooltip='Log in' (click)='openLoginDialog()'>
+            <i class="material-icons">person</i>
+        </button>
+    </div>
 </mat-toolbar>

@@ -2,3 +2,16 @@
     font-size: 34px;
     margin-right: 10px;
 }
+
+.toolbar-container{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.spacer{
+    flex: 1;
+}

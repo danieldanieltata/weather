@@ -14,7 +14,7 @@ export class AppComponent implements OnInit{
   // TODO: the user should be able to press the one of the most searched places and get forecast
   // EDGE CASE cant search by country only by city
   // TODO: For now its hard coded, if I have more time for user system I will chage this per-user
-  private mostSearchedPlaces = {'Tel Aviv': {}, 'Amsterdam': {}, 'Miami': {}};
+  private mostSearchedPlaces = {'Tel Aviv': {}, 'Amsterdam': {}, 'Madrid': {}};
   private forecastData: {}
 
   constructor(private _dataService: DataService){}

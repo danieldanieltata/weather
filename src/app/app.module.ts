@@ -11,13 +11,17 @@ import { MatToolbarModule,
          MatInputModule,
          MatCardModule,
          MatOptionModule,
-         MatAutocompleteModule } from '@angular/material';
+         MatAutocompleteModule,
+         MatButtonModule,
+         MatTooltipModule,
+         MatDialogModule } from '@angular/material';
 
 // Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { CurrentWeatherCardComponent } from './components/current-weather-card/current-weather-card.component';
-import { ForecastComponent } from './components/forecast/forecast.component'
+import { ForecastComponent } from './components/forecast/forecast.component';
+import { LoginDialog } from './shared/dialogs/login-dialog/login-dialog.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { ForecastComponent } from './components/forecast/forecast.component'
     ToolbarComponent,
     SearchComponent,
     CurrentWeatherCardComponent,
-    ForecastComponent, 
+    ForecastComponent,
+    LoginDialog, 
   ],
   imports: [
     BrowserModule,
@@ -36,9 +41,13 @@ import { ForecastComponent } from './components/forecast/forecast.component'
     MatCardModule,
     MatOptionModule,
     MatAutocompleteModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatDialogModule,
     HttpClientModule
   ],
   providers: [],
+  entryComponents: [LoginDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
