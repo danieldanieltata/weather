@@ -16,3 +16,20 @@
 
     justify-content: space-between;
 }
+
+.forecast{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: inherit;
+      width: 1000px;
+    }
+  }

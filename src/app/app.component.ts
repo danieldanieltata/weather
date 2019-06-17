@@ -12,7 +12,8 @@ export class AppComponent implements OnInit{
   // TODO: make most searched places like news slides 
   // TODO: make a feature that you can choose which destentation you want and put them all tohgther
   // TODO: the user should be able to press the one of the most searched places and get forecast
-  // EDGE CASE cant search by country only by city
+  // EDGE CASE: cant search by country only by city
+  // TODO: make a user auth 
   // TODO: For now its hard coded, if I have more time for user system I will chage this per-user
   private mostSearchedPlaces = {'Tel Aviv': {}, 'Amsterdam': {}, 'Madrid': {}};
   private forecastData: {}

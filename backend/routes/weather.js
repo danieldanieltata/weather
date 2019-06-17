@@ -6,6 +6,9 @@ var apixuConfig = require('../configs/apixu-api');
 
 var apiKey = apixuConfig.apiKey;
 
+// Getting weather data using the apixu api and axois as request module 
+// TODO: If user is authenticated then send his last search results 
+
 router.get('/', function(req, res, next) {
   res.send();
 });

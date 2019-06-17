@@ -25,14 +25,16 @@ export class ForecastComponent implements OnInit {
 
   // Just adding a days of the week as word 
   addForecastDayToObject(forecastArray: []){
-    for(let forecastDay of this.forecastDaysArray){
+    for(let i in this.forecastDaysArray){
+      let forecastDay: {} = this.forecastDaysArray[i];
+      
       let dayOfWeek = new Date(forecastDay['date']).getDay();
       forecastDay['stringDay'] = this.getDayInWeek(dayOfWeek);
     }
   }
 
   // Return's what is the day of he week in word
-  getDayInWeek(dayNumber: number){
+  getDayInWeek(dayNumber: number) : string{
     let weekdays = new Array(7);
     weekdays[0] = "Sunday";
     weekdays[1] = "Monday";

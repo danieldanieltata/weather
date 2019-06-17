@@ -15,6 +15,8 @@ router.get('/', sessionChecker, function(req, res, next) {
   res.send({});
 });
 
+// Just a login for now 
+// TODO: change to DB itegration
 router.post('/login', function(req, res){
   var users = {username: 'daniel', password: 'pass'};
   
