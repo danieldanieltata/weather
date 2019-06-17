@@ -23,7 +23,6 @@ export class CurrentWeatherCardComponent implements OnInit {
 
     if(this.cityWeatherData)
       this.keyFound = true;
-    
 
   }
 

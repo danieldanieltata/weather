@@ -15,10 +15,23 @@
     flex-direction: row;
 
     justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.last-searched-destinations{
+  width: 1000px;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
 }
 
 .forecast{
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-name: slidein;
 }
 

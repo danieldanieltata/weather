@@ -4,17 +4,17 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]='username' cdkFocusInitial>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]='password'>
     </mat-form-field>
 
 </div>
 
 <div mat-dialog-actions>
-  <button mat-button cdkFocusInitial>Login</button>
+  <button mat-button (click)='checkCredentials()'>Login</button>
   <button mat-button (click)='dialogRef.close()'>Cancel</button>
 </div>

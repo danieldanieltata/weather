@@ -5,8 +5,11 @@
 
         <div class="spacer"></div>
 
-        <button mat-icon-button matTooltip='Log in' (click)='openLoginDialog()'>
+        <button mat-icon-button matTooltip='Log in' (click)='openLoginDialog()' *ngIf='!userAuthenticatedData'>
             <i class="material-icons">person</i>
         </button>
+
+        <h4 *ngIf='userAuthenticatedData'>Hello, {{userAuthenticatedData.fullname}}</h4>
+
     </div>
 </mat-toolbar>

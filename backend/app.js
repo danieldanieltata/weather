@@ -6,6 +6,9 @@ var logger = require('morgan');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/weather-db')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -45,7 +48,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // use it before all route definitions
-app.use(cors({origin: '*'}));
+app.use(cors({origin: 'http://localhost:4200', credentials: true}));
 
 app.use(logger('dev'));
 app.use(express.json());
