@@ -4,12 +4,41 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var weatherRoute = require('./routes/weather');
 
 var app = express();
+
+
+// initialize body-parser to parse incoming parameters requests to req.body
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// initialize cookie-parser to allow us access the cookies stored in the browser. 
+app.use(cookieParser());
+
+// initialize express-session to allow us track the logged-in user across sessions.
+app.use(session({
+    key: 'user_sid',
+    secret: 'really_secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
+
+// This middleware will check if user's cookie is still saved in browser and user is not set, then automatically log the user out.
+// This usually happens when you stop your express server after login, your cookie still remains saved in the browser.
+app.use((req, res, next) => {
+  if (req.cookies.user_sid && !req.session.user) {
+      res.clearCookie('user_sid');        
+  }
+  next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
