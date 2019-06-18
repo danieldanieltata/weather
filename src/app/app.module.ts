@@ -16,14 +16,16 @@ import { MatToolbarModule,
          MatAutocompleteModule,
          MatButtonModule,
          MatTooltipModule,
-         MatDialogModule } from '@angular/material';
+         MatDialogModule,
+         MatSnackBarModule } from '@angular/material';
 
 // Components
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { CurrentWeatherCardComponent } from './components/current-weather-card/current-weather-card.component';
 import { ForecastComponent } from './components/forecast/forecast.component';
-import { LoginDialog } from './shared/dialogs/login-dialog/login-dialog.component'
+import { LoginDialog } from './shared/dialogs/login-dialog/login-dialog.component';
+import { SignupDialog } from './shared/dialogs/signup-dialog/signup-dialog.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { LoginDialog } from './shared/dialogs/login-dialog/login-dialog.componen
     SearchComponent,
     CurrentWeatherCardComponent,
     ForecastComponent,
-    LoginDialog, 
+    LoginDialog,
+    SignupDialog, 
   ],
   imports: [
     BrowserModule,
@@ -46,11 +49,12 @@ import { LoginDialog } from './shared/dialogs/login-dialog/login-dialog.componen
     MatButtonModule,
     MatTooltipModule,
     MatDialogModule,
+    MatSnackBarModule,
     HttpClientModule,
     FormsModule
   ],
   providers: [],
-  entryComponents: [LoginDialog],
+  entryComponents: [LoginDialog, SignupDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

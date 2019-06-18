@@ -1,4 +1,10 @@
-<h2>{{_forecastData.location.name}}</h2>
+<h2>
+  {{_forecastData.location.name}} 
+  <button *ngIf='isAuthenticated' mat-icon-button color='primary' matTooltip='Save as selected destination' (click)='makeSelectedDestination()'>
+    <i class="material-icons" style="margin-bottom: 5px;">save</i>
+  </button>
+</h2>
+
 <div class="forecast-days-container">
 
   <mat-card class="forecast-day-card" *ngFor='let forcastDay of forecastDaysArray'>

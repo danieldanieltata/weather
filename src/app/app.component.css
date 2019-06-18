@@ -30,19 +30,42 @@
   margin-bottom: 10px;
 }
 
+.last-searched-destinations-container{
+  animation-duration: 4s;
+  animation-name: fadeIn;
+}
+
 .forecast{
     animation-duration: 1.5s;
     animation-name: slidein;
 }
 
+/* Change some material props */
+/deep/ .mat-card{
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12) !important;
+}
+
+/* Animations */
 @keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%; 
+      display: none;
     }
   
     to {
       margin-left: inherit;
       width: 1000px;
+      display: inline;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+      opacity: 1;
     }
   }

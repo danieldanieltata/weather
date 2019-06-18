@@ -1,4 +1,4 @@
-<h1 mat-dialog-title style="text-align:center;">Weather - Login</h1>
+<h1 mat-dialog-title style="text-align:center;">Weather - Signup</h1>
 
 <div mat-dialog-content style="display:flex; flex-direction:column">
 
@@ -8,13 +8,18 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input matInput [(ngModel)]='fullname' type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
       <input matInput [(ngModel)]='password' type="password">
     </mat-form-field>
-  <p>Dont have user?<button mat-button (click)='openSignupDialog()'> signup now!</button></p>
+
 </div>
 
 <div mat-dialog-actions>
-  <button mat-raised-button (click)='checkCredentials()' color='primary'>Login</button>
-  <button mat-raised-button (click)='dialogRef.close()'>Cancel</button>
+  <button mat-button (click)='signupUser()'>Signup</button>
+  <button mat-button (click)='dialogRef.close()'>Cancel</button>
 </div>

@@ -28,4 +28,12 @@ export class AuthenticationService {
     return this.http.post(this.loginRequestUrl, {username: username, password: password}, {withCredentials: true});
   }
   
+  signup(username: string, fullname: string, password: string){
+    return this.http.post(this.signupRequestUrl, {username: username, fullname: fullname, password: password}, {withCredentials: true})
+  }
+
+  logout(){
+    return this.http.get((this.logoutRequestUrl), {withCredentials: true});
+  }
+
 }

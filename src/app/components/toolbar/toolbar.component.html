@@ -9,7 +9,7 @@
             <i class="material-icons">person</i>
         </button>
 
-        <h4 *ngIf='userAuthenticatedData'>Hello, {{userAuthenticatedData.fullname}}</h4>
+        <h4 *ngIf='userAuthenticatedData'>Hello, <a href="#" matTooltip='Logout' style="color: white" (click)='logout()'>{{userAuthenticatedData.fullname}}</a></h4>
 
     </div>
 </mat-toolbar>
