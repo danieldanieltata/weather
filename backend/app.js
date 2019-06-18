@@ -43,10 +43,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
 // use it before all route definitions
 app.use(cors({origin: 'http://localhost:4200', credentials: true}));
 
@@ -56,6 +52,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/weather', weatherRoute);

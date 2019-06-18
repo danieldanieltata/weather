@@ -8,13 +8,14 @@ var userSchema = new Schema({
     password: {type: String, required: true}
 });
 
+userSchema.statics.validateUser = function(username, callback){
+    this.findOne({username: username}, function(err, userDoc){
+        if(err) callback({userValid: false});
 
-
-// userSchema.statics.signupUser = function(username, password){
-//     var newUser = new userModel({username: username, password: password});
-
-//     newUser.save();
-// }
+        if(!userDoc) callback({userValid: true});
+        else callback({userValid: false});
+    })
+}
 
 userSchema.statics.authenticate = function(username, password, callback){
     this.findOne({username: username}, function(err, userDoc){
