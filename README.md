@@ -20,6 +20,7 @@ This is a web apllication that can show you the weather, in the picture below yo
  - For the sake of the task I passed every http request to my server, even if its for other api(**as required, to use a backend node js**)
  - You cant search by country, the weather api dosen't provide that for what I know
  - No Small screens compabilty,  for now 
+ - No password enctyption yet 
 
 # Features that good to know about
 - If you have a user the server saves your last searched places, also you can make a selected places
