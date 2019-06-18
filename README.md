@@ -13,6 +13,7 @@ This is a web apllication that can show you the weather, in the picture below yo
 - I didn't make a good config file, I need to do one 
  - Client - The app component should be more clean, I will make other components that will be the container of the small components
  - Client - Somehow ignore the scrolling(change the ui a little bit)
+ - Server - The backend is not perfect, need to rearrange some things and make it look better
  - Server - Make the server more robust 
 
 
