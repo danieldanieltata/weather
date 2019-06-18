@@ -21,6 +21,9 @@ This is a web apllication that can show you the weather, in the picture below yo
  - You cant search by country, the weather api dosen't provide that for what I know
  - No Small screens compabilty,  for now 
 
+# Features that good to know about
+- If you have a user the server saves your last searched places, also you can make a selected places
+- If you search city you get the weather of all week 
 
 # Some more features that I want to do in the future
 
